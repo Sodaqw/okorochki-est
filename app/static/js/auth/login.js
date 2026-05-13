@@ -1,5 +1,6 @@
 import {loginUser} from '../api/authApi.js';
 import {showToast} from '../components/toast.js';
+//Вход для пользователя
 const form = document.getElementById('loginForm');
 form.addEventListener('submit',
 async (event) => {
@@ -18,8 +19,7 @@ async (event) => {
                 response.user_id
             );
             setTimeout(() => {
-                window.location.href =
-                    '/applications';
+                window.location.href = '/applications'; 
             }, 1000);
         }
     } catch (error) {
