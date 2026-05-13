@@ -1,5 +1,6 @@
 import {registerUser} from '../api/authApi.js';
 import {showToast} from '../components/toast.js';
+//Функция для регистрации пользователя
 const form = document.getElementById('registerForm');
 form.addEventListener('submit',
 async (event) => {
@@ -15,9 +16,7 @@ async (event) => {
         const response = await registerUser(data);
         showToast(response.message);
         if (response.success) {
-            setTimeout(() => {
-                window.location.href =
-                    '/login';
+            setTimeout(() => { window.location.href = '/login';
             }, 1500);
         }
     } catch (error) {
