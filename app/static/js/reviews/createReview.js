@@ -1,6 +1,6 @@
-import { showToast }
-from '../components/toast.js';
+import { showToast } from '../components/toast.js';
 import { createReview } from '../api/reviewApi.js';
+//Функция для создания отзыва
 export function initReviewForm() {
     const form = document.getElementById('reviewForm');
     form.addEventListener('submit',
